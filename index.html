@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teen Fashionista</title>
+    <script src="https://kit.fontawesome.com/465fe271fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <section id="headr">
+        <div id="header">
+            <a href="#"><img src="res/imgs/header/logo.png" alt="logo"></a>
+
+            <div>
+                <input type="text" placeholder="Search" id="search-bar">
+            </div>
+            <div id="head-logs">
+                <ul id="user-stuff">
+                    <li><a href="wish-list.html"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                    <li><a href="#cartbox" ><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                    <script src="js/scripts.js"></script>
+                    <li><a href="account.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></li>
+                    <li><a href="#" onclick="toggle()" id="bar"><i class="fa-solid fa-bars"></i></a></li>
+                    <!-- <li><a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i></a></li> -->
+                    
+                </ul>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="nav">
+        <ul id="navbar">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="new.html">WHAT'S NEW</a></li>
+            <li><a href="categories.html" id="categ">CATEGORIES</a></li>
+            <li><a href="brands.html">BRANDS</a></li>
+            <li><a href="blog-page.html">BLOG</a></li>
+        </ul>
+
+    </section>
+    <script>
+        function toggle() {
+            const toggleButton = document.getElementById('bar')[0]
+            const navbarLinks = document.getElementsById('navbar')[0]
+
+            navbarLinks.style.right('0px')
+
+        }
+    </script>
+    <section id="categories">
+        <div class="bigdabba">
+            <div class="dabba">
+                <div class="contents">
+                    <h3>Office Wears</h3>
+                    <h4>Office shirts</h4>
+                    <h4>Pants</h4>
+                    <h4>Ties</h4>
+                    <h4>Shoes</h4>
+                </div>
+                <div class="contents">
+                    <h3>Office Wears</h3>
+                    <h4>Office shirts</h4>
+                    <h4>Pants</h4>
+                    <h4>Ties</h4>
+                    <h4>Shoes</h4>
+                </div>
+                <div class="contents">
+                    <h3>Office Wears</h3>
+                    <h4>Office shirts</h4>
+                    <h4>Pants</h4>
+                    <h4>Ties</h4>
+                    <h4>Shoes</h4>
+                </div>
+                <div class="contents">
+                    <h3>Office Wears</h3>
+                    <h4>Office shirts</h4>
+                    <h4>Pants</h4>
+                    <h4>Ties</h4>
+                    <h4>Shoes</h4>
+                </div>
+                <div class="contents">
+                    <h3>Office Wears</h3>
+                    <h4>Office shirts</h4>
+                    <h4>Pants</h4>
+                    <h4>Ties</h4>
+                    <h4>Shoes</h4>
+                </div>
+                <div class="contents">
+                    <h3>Office Wears</h3>
+                    <h4>Office shirts</h4>
+                    <h4>Pants</h4>
+                    <h4>Ties</h4>
+                    <h4>Shoes</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hero">
+        <div class="hero-box">
+            <h2>Welcome to Teen Fashionista</h2>
+            <h1>Your preferred <br>Men's online shopping platform.</h1>
+            <p>TF offers a seamless, fun and reliable shopping experience to<br>
+                millions of Teens worldwide.</p>
+            <button><a href="#">Explore Now</a></button>
+        </div>
+    </section>
+
+    <section id="apparels">
+        <div class="top">
+            <h2>APPARELS</h2>
+        </div>
+        <div class="stuffs">
+            <h3>Shirts</h3>
+            <h3>T-Shirts</h3>
+            <h3>Jeans</h3>
+            <h3>Tracks</h3>
+        </div>
+
+        <div class="container-app">
+
+            <div class="app1">
+                <img onclick="window.open('singleproduct.html', '_self')" class="shop-item-image"
+                    src="res/Outfits/Shirt2.jpg" alt="1">
+                <div class="descript">
+                    <span>Adidas</span>
+                    <h5 class="shop-item-title">  Checked Flannels</h5>
+                </div>
+                <div class="app2">
+                    <h4 class="shop-item-price">$28</h4>
+                    <button class="btn btn-primary shop-item-button" type="button">
+                        Pushcart</button>
+
+                </div>
+            </div>
+            <div class="app1">
+                <img class="shop-item-image" src="res/Outfits/Tshirt 1.jpg" alt="1">
+                <div class="descript">
+                    <span>Adidas</span>
+                    <h5 class="shop-item-title">Cartoon T-Shirts</h5>
+                </div>
+                <div class="app2">
+                    <h4 class="shop-item-price">$15</h4>
+                    <button class="btn btn-primary shop-item-button" type="button">
+                        Pushcart</button>
+
+                </div>
+            </div>
+            <div class="app1">
+                <img class="shop-item-image" src="res/Outfits/Pant7.webp" alt="1">
+                <div class="descript">
+                    <span>Adidas</span>
+                    <h5 class="shop-item-title">Joggers</h5>
+                </div>
+                <div class="app2">
+                    <h4 class="shop-item-price">$54</h4>
+                    <button class="btn btn-primary shop-item-button" type="button">
+                        Pushcart</button>
+
+                </div>
+            </div>
+            <div class="app1">
+                <img class="shop-item-image" src="res/Outfits/Pant9.webp" alt="1">
+                <div class="descript">
+                    <span>Adidas</span>
+                    <h5 class="shop-item-title">Jeans</h5>
+                </div>
+                <div class="app2">
+                    <h4 class="shop-item-price">$21</h4>
+                    <button class="btn btn-primary shop-item-button" type="button">
+                        Pushcart</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner">
+        <div id="banner1">
+            <h4>Repair services</h4>
+            <h2>Upto <span>70% off</span> - All Accessories</h2>
+            <button>Explore More</button>
+        </div>
+    </section>
+
+    <section id="Accessories">
+        <div class="top">
+            <h2>ACCESSORIES</h2>
+        </div>
+        <div class="stuffs">
+            <h3>Watches</h3>
+            <h3>Glasses</h3>
+            <h3>Chains</h3>
+            <h3>Belts</h3>
+        </div>
+
+
+        <div class="container-app">
+
+            <div class="app1">
+                <img class="shop-item-image" src="res/Accessories/Watch1.webp" alt="1">
+                <div class="descript">
+                    <span>Specialized</span>
+                    <h5 class="shop-item-title">Rolex SE</h5>
+                </div>
+                <div class="app2">
+                    <h4 class="shop-item-price">$78</h4>
+                    <button class="btn btn-primary shop-item-button" type="button">
+                        Pushcart</button>
+
+                </div>
+            </div>
+            <div class="app1">
+                <img class="shop-item-image" src="res/Accessories/Sunglass2.webp" alt="1">
+                <div class="descript">
+                    <span>Ray Ban</span>
+                    <h5 class="shop-item-title">Aviators</h5>
+                </div>
+                <div class="app2">
+                    <h4 class="shop-item-price">$22</h4>
+                    <button class="btn btn-primary shop-item-button" type="button">
+                        Pushcart</button>
+
+                </div>
+            </div>
+            <div class="app1">
+                <img class="shop-item-image" src="res/Accessories/Chain1.webp" alt="1">
+                <div class="descript">
+                    <span>Corpse</span>
+                    <h5 class="shop-item-title">Necklaces</h5>
+                </div>
+                <div class="app2">
+                    <h4 class="shop-item-price">$50</h4>
+                    <button class="btn btn-primary shop-item-button" type="button">
+                        Pushcart</button>
+
+                </div>
+            </div>
+            <div class="app1">
+                <img class="shop-item-image" src="res/Accessories/Belt1.webp" alt="1">
+                <div class="descript">
+                    <span>Adidas</span>
+                    <h5 class="shop-item-title">Leather belt</h5>
+                </div>
+                <div class="app2">
+                    <h4 class="shop-item-price">$18</h4>
+                    <button class="btn btn-primary shop-item-button" type="button">
+                        Pushcart</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner2">
+        <div class="fbanner">
+            <h3>Crazy deals</h3>
+            <h2>Buy 1 get 1</h2>
+            <span>The best classics on sale</span>
+            <button>Explore</button>
+        </div>
+        <div class="fbanner" id="sbanner">
+            <h3>Crazy deals</h3>
+            <h2>Buy 1 get 1</h2>
+            <span>The best classics on sale</span>
+            <button>Explore</button>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="ban">
+            <h2>Seasonal sale</h2>
+            <h3>Winter Collection <span>-30% off</span></h3>
+        </div>
+        <div class="ban">
+            <h2>Footwears are outt</h2>
+            <h3>Cover your smells with<span>-20% off</span></h3>
+        </div>
+        <div class="ban">
+            <h2>Street Wears</h2>
+            <h3>Best Collection with<span>-30% off</span></h3>
+        </div>
+    </section>
+
+    <section id="cartbox" class="contaner content-section">
+        <h2 class="section-header">CART</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        <script src="js/scripts.js"></script>
+
+    </section>
+
+    <section>
+        <footer>
+            <div class="row primary">
+                <div class="column about">
+                    <h3> Teen Fashionista</h3>
+                    <p>
+                        TF offers a seamless, fun and reliable shopping experience to
+                        millions of Teens worldwide.
+                    </p>
+                    <div class="social">
+                        <i class="fa-brands fa-facebook-square"></i>
+                        <i class="fa-brands fa-instagram-square"></i>
+                        <i class="fa-brands fa-twitter-square"></i>
+                        <i class="fa-brands fa-youtube-square"></i>
+                        <i class="fa-brands fa-whatsapp-square"></i>
+                    </div>
+                </div>
+                <div class="column links">
+                    <h3>Some Links</h3>
+                    <ul>
+                        <li>
+                            <a href="#faq">F.A.Q</a>
+                        </li>
+                        <li>
+                            <a href="#cookies-policy">Cookies Policy</a>
+                        </li>
+                        <li>
+                            <a href="#terms-of-services">Terms Of Service</a>
+                        </li>
+                        <li>
+                            <a href="#support">Support</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="column links">
+                    <h3>Some Links</h3>
+                    <ul>
+                        <li>
+                            <a href="#faq">F.A.Q</a>
+                        </li>
+                        <li>
+                            <a href="#cookies-policy">Cookies Policy</a>
+                        </li>
+                        <li>
+                            <a href="#terms-of-services">Terms Of Service</a>
+                        </li>
+                        <li>
+                            <a href="#support">Support</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="column subscribe">
+                    <h3>Newsletter</h3>
+                    <div>
+                        <input type="email" placeholder="Your email id here" />
+                        <button>Subscribe</button>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </section>
+
+   
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PROFILE</title>
+    <link rel="stylesheet" type="text/css" href="slide navbar style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style3.css">
+
+</head>
+
+<body>
+
+    <section id="o-header">
+        <a href="#" style="color:white; font-size: 30px;">MY PROFILE</a>
+        <a href="sellerlog.html">
+            <h2>Seller?</h2>
+        </a>
+    </section>
+
+    <div class="bod">
+        <div class="main">
+            <input type="checkbox" id="chk" aria-hidden="true">
+
+            <div class="signup">
+                <form name="register" onsubmit="return formValidation()">
+                    <label for="chk" aria-hidden="true">Sign up </label>
+                    <input type="text" name="txt" placeholder="User name" required="">
+                    <input type="email" name="email" placeholder="Email" required="">
+                    <input type="password" name="pswd" placeholder="Password" required="">
+                    <button onclick="sign_cookie();">Sign up</button>
+                    <script src="cookie.js"></script>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="validation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/465fe271fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+     .blogbanner {
+            min-height: 80vh;
+            background: url(blog/banner.jpg);
+            background-size: cover;
+            background-position: center;
+            display: grid;
+            place-items: center;
+            padding-top: 8rem;
+        }
+
+        .blogbanner .content {
+            text-align: center;
+            background: #fff;
+            border-radius: 0.5rem;
+            /*box-shadow: var(--box-shadow);*/
+            padding: 3rem;
+            max-width: 50rem;
+        }
+
+        .blogbanner .content h3 {
+            font-size: 4rem;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .blogbanner .content p {
+            font-size: 1.7rem;
+            color: cyan;
+            padding: 1rem 0;
+            line-height: 1.5;
+        }
+
+        .blogbtn {
+            margin-top: 1rem;
+            display: inline-block;
+            background: black;
+            color: #fff;
+            border-radius: 0.9rem 3rem;
+            cursor: pointer;
+            font-size: 1.7rem;
+            padding: 1rem 1.5rem;
+        }
+
+        .blogcontainer {
+            padding-top: 5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            background: #eee;
+        }
+
+        .blogcontainer .postscontainer .post {
+            width: 100%;
+            padding: 2rem;
+            background: #fff;
+            border: var(--border);
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .blogcontainer .postscontainer .post .blogimage {
+            height: 40rem;
+            width: 100%;
+            border-radius: .5rem;
+            object-fit: cover;
+        }
+
+        .blogcontainer .postscontainer .post .blogdate {
+            padding-top: 2rem;
+            font-size: 1.5rem;
+            color: orange;
+        }
+
+        .blogcontainer .postscontainer .post .blogtitle {
+            padding-top: 1.5rem;
+            font-size: 2.5rem;
+            color: black;
+        }
+
+        .blogcontainer .postscontainer .post .blogtext {
+            padding-top: 1rem 0;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: black;
+        }
+
+        .blogcontainer .postscontainer .bloglinks {
+            border-top: var(--border);
+            margin-top: 0.5rem;
+            padding-top: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .blogcontainer .postscontainer .bloglinks .bloguser {
+            margin-right: auto;
+        }
+
+        .blogcontainer .postscontainer .bloglinks .blogicon {
+            padding-right: 1rem;
+        }
+
+        .blogcontainer .postscontainer .bloglinks a:hover {
+            color: blue;
+        }
+
+        .blogcontainer .postscontainer .bloglinks a:hover i {
+            color: blue;
+        }
+
+        .blogcontainer .sidebar .blogbox {
+            border: var(--border);
+            border-radius: .5rem;
+            overflow: hidden;
+            background: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .blogcontainer .sidebar .blogbox .title {
+            padding: 1.5rem;
+            font-size: 2rem;
+            color: #fff;
+            background: black;
+            text-transform: capitalize;
+        }
+
+        .blogcontainer .sidebar .blogbox .about {
+            text-align: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .blogcontainer .sidebar .blogbox .about img {
+            height: 15rem;
+            width: 15rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 1rem 0;
+        }
+
+        .blogcontainer .sidebar .blogbox .about p {
+            line-height: 1.5;
+            padding: 1rem;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="headr">
+        <div id="header">
+            <a href="#"><img src="imgs/header/logo.png" alt="logo"></a>
+
+            <div>
+                <input type="text" placeholder="Search" id="search-bar">
+            </div>
+            <div id="head-logs">
+                <ul id="user-stuff">
+                    <li><a href="wish-list.html"><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+                    <li><a href="orders.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                    <li><a href="account.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></li>
+                    <li><a href="#" onclick="toggle()" id="bar"><i class="fa-solid fa-bars"></i></a></li>
+                    <script>
+                        function toggle() {
+                            const toggleButton = document.getElementById('bar')[0]
+                            const navbarLinks = document.getElementsByClassName('navbar')[0]
+
+                            navbarLinks.style.right('0px')
+
+                        }
+                    </script>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="nav">
+        <ul id="navbar">
+            <li><a href="v1.html">HOME</a></li>
+            <li><a href="new.html">WHAT'S NEW</a></li>
+            <li><a href="categories.html" id="categ">CATEGORIES</a></li>
+            <li><a href="brands.html">BRANDS</a></li>
+            <li><a href="blog-page.html">BLOG</a></li>
+        </ul>
+
+    </section>
+
+    <section class="blogbanner" id="blogbanner">
+
+        <div class="content">
+            <h3>Explore your limits</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+            <a href="#" class="blogbtn">Blogs</a>
+        </div>
+
+    </section>
+
+    <section class="blogcontainer" id="posts">
+
+        <div class="postscontainer">
+            <div class="post">
+                <img src="blog/blog1.jpg" alt="blog1" class="blogimage">
+                <div class="blogdate">
+                    <i class="far fa-clock"></i>
+                    <span>14th Nov 2022</span>
+                </div>
+                <h3 class="blogtitle">BLOG 1 TITLE</h3>
+                <p class="blogtext">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Nisi cum excepturi totam inventore dolor esse, veritatis recusandae tempore libero,
+                    tenetur eaque minus. Provident voluptatem voluptas velit odit iste modi tempora sequi quas ipsum,
+                    aliquam, incidunt maxime dignissimos dolores commodi aperiam, eaque maiores recusandae architecto
+                    quos natus. Dolore alias temporibus cumque.</p>
+                <p class="blogtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit corrupti accusamus
+                    quis! Libero, excepturi quibusdam distinctio ad aperiam veniam at cum iste odio quia, voluptatum
+                    debitis blanditiis, autem nisi ipsa?</p>
+                <div class="bloglinks">
+                    <a href="#" class="bloguser">
+                        <i class="far fa-user"></i>
+                        <span>by Admin</span>
+                    </a>
+                    <a href="#" class="blogicon">
+                        <i class="far fa-comment"></i>
+                        <span>(48)</span>
+                    </a>
+                    <a href="#" class="blogicon">
+                        <i class="far fa-share-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="postscontainer">
+            <div class="post">
+                <img src="blog/blog2.jpg" alt="blog1" class="blogimage">
+                <div class="blogdate">
+                    <i class="far fa-clock"></i>
+                    <span>14th Nov 2022</span>
+                </div>
+                <h3 class="blogtitle">BLOG 1 TITLE</h3>
+                <p class="blogtext">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Nisi cum excepturi totam inventore dolor esse, veritatis recusandae tempore libero,
+                    tenetur eaque minus. Provident voluptatem voluptas velit odit iste modi tempora sequi quas ipsum,
+                    aliquam, incidunt maxime dignissimos dolores commodi aperiam, eaque maiores recusandae architecto
+                    quos natus. Dolore alias temporibus cumque.</p>
+                <p class="blogtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit corrupti accusamus
+                    quis! Libero, excepturi quibusdam distinctio ad aperiam veniam at cum iste odio quia, voluptatum
+                    debitis blanditiis, autem nisi ipsa?</p>
+                <div class="bloglinks">
+                    <a href="#" class="bloguser">
+                        <i class="far fa-user"></i>
+                        <span>by Admin</span>
+                    </a>
+                    <a href="#" class="blogicon">
+                        <i class="far fa-comment"></i>
+                        <span>(48)</span>
+                    </a>
+                    <a href="#" class="blogicon">
+                        <i class="far fa-share-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="postscontainer">
+            <div class="post">
+                <img src="blog/blog3.jpg" alt="blog1" class="blogimage">
+                <div class="blogdate">
+                    <i class="far fa-clock"></i>
+                    <span>14th Nov 2022</span>
+                </div>
+                <h3 class="blogtitle">BLOG 1 TITLE</h3>
+                <p class="blogtext">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Nisi cum excepturi totam inventore dolor esse, veritatis recusandae tempore libero,
+                    tenetur eaque minus. Provident voluptatem voluptas velit odit iste modi tempora sequi quas ipsum,
+                    aliquam, incidunt maxime dignissimos dolores commodi aperiam, eaque maiores recusandae architecto
+                    quos natus. Dolore alias temporibus cumque.</p>
+                <p class="blogtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit corrupti accusamus
+                    quis! Libero, excepturi quibusdam distinctio ad aperiam veniam at cum iste odio quia, voluptatum
+                    debitis blanditiis, autem nisi ipsa?</p>
+                <div class="bloglinks">
+                    <a href="#" class="bloguser">
+                        <i class="far fa-user"></i>
+                        <span>by Admin</span>
+                    </a>
+                    <a href="#" class="blogicon">
+                        <i class="far fa-comment"></i>
+                        <span>(48)</span>
+                    </a>
+                    <a href="#" class="blogicon">
+                        <i class="far fa-share-square"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+
+            <div class="blogbox">
+                <h3 class="title">ABOUT ME</h3>
+                <div class="about">
+                    <img src="blog/blog4.jpg" alt="1">
+                    <h3>Zaidu</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta expedita, enim esse mollitia
+                        quae temporibus.</p>
+                    <div class="follow">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-instagram"></a>
+                        <a href="#" class="fab fa-linkedin"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <footer>
+            <div class="row primary">
+                <div class="column about">
+                    <h3> Teen Fashionista</h3>
+                    <p>
+                        TF offers a seamless, fun and reliable shopping experience to
+                        millions of Teens worldwide.
+                    </p>
+                    <div class="social">
+                        <i class="fa-brands fa-facebook-square"></i>
+                        <i class="fa-brands fa-instagram-square"></i>
+                        <i class="fa-brands fa-twitter-square"></i>
+                        <i class="fa-brands fa-youtube-square"></i>
+                        <i class="fa-brands fa-whatsapp-square"></i>
+                    </div>
+                </div>
+                <div class="column links">
+                    <h3>Some Links</h3>
+                    <ul>
+                        <li>
+                            <a href="#faq">F.A.Q</a>
+                        </li>
+                        <li>
+                            <a href="#cookies-policy">Cookies Policy</a>
+                        </li>
+                        <li>
+                            <a href="#terms-of-services">Terms Of Service</a>
+                        </li>
+                        <li>
+                            <a href="#support">Support</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="column links">
+                    <h3>Some Links</h3>
+                    <ul>
+                        <li>
+                            <a href="#faq">F.A.Q</a>
+                        </li>
+                        <li>
+                            <a href="#cookies-policy">Cookies Policy</a>
+                        </li>
+                        <li>
+                            <a href="#terms-of-services">Terms Of Service</a>
+                        </li>
+                        <li>
+                            <a href="#support">Support</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="column subscribe">
+                    <h3>Newsletter</h3>
+                    <div>
+                        <input type="email" placeholder="Your email id here" />
+                        <button>Subscribe</button>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>

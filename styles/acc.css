@@ -1,0 +1,49 @@
+/*COMMON FONTS & SIZES*/
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+#login, #signup {
+    padding: 30px;
+    margin: 40px;
+    font-family:'Spartan', sans-serif ;
+    font-weight: 600;
+
+}
+
+.log, .sign {
+    border: 2px solid black;
+    padding: 30px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.log button, .sign button{
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 00.2s;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 4px;
+}
+
+
+.log button:hover, .sign button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+.ins{
+    margin:30px ;
+}
+
+#login span, #signup span{
+    margin-top: 9px;
+    right: 3px;
+    font-size: 14px;
+    padding: 30px;
+}

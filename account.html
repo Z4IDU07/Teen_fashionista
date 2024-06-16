@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>PROFILE</title>
+	<link rel="stylesheet" type="text/css" href="slide navbar style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles/style2.css">
+	<script src="js/cookie.js"></script>
+	<script src="js/login_validation.js"></script>
+</head>
+
+<body>
+	<section id="o-header">
+		<a href="#" style="color:white; font-size: 30px;">MY PROFILE</a>
+		<a href="sellerlog.html">
+			<div class="sell-button">
+				<h2>Seller?</h2>
+			</div>
+		</a>
+	</section>
+	<div class="bod">
+		<div class="main">
+			<div class="wrapper">
+				<header>Login</header>
+				<form action="#" name="register" onsubmit="return formValidation()">
+					<div class="field email">
+						<div class="input-area">
+							<input type="text" name="email" placeholder="Email Address">
+							<i class="icon fas fa-envelope"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Email can't be blank</div>
+					</div>
+					<div class="field password">
+						<div class="input-area">
+							<input type="password" name="pswd" placeholder="Password">
+							<i class="icon fas fa-lock"></i>
+							<i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Password can't be blank</div>
+					</div>
+					<div class="pass-txt"><a href="#">Forgot password?</a></div>
+					<input type="submit" onclick="log_cookie()" value="Login">
+				</form>
+				<div class="sign-txt">Not yet member? <a href="signup.html">Signup now</a></div>
+			</div>
+		</div>
+</body>
+
+</html>

@@ -1,0 +1,1493 @@
+/*COMMON FONTS & SIZES*/
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+.checked {
+    color: orange;
+    cursor: pointer;
+}
+
+body {
+    max-width: 100%;
+}
+
+.stuffs {
+    position: relative;
+}
+
+button {
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.top {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: top .5s ease;
+    /* border: #088178 2px solid;    */
+}
+
+.top img {
+    opacity: 0;
+    width: 80px;
+    height: 70px;
+    padding-bottom: 4px;
+    /* border: 3px solid #088178; */
+}
+
+.top h2:hover {
+    color: #088178;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.container-app i {
+    width: 50px;
+    height: 35px;
+    padding: 8px;
+    border-radius: 20px;
+    color: #088178;
+    border: 1px solid #088178;
+}
+
+.container-app i:hover {
+    border: none;
+    color: white;
+    background-color: black;
+}
+
+
+
+/*HEADER*/
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #231f20;
+    max-width: inherit;
+}
+
+#header img {
+    width: 170px;
+    height: 80px;
+}
+
+#search-bar {
+    max-width: 200px;
+    height: 40px;
+}
+
+#search-bar::placeholder {
+    padding: 12px;
+}
+
+#user-stuff {
+    max-width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#user-stuff li {
+    list-style: none;
+    padding: 0 30px;
+}
+
+#user-stuff li a {
+    text-decoration: none;
+    font-size: 45px;
+    font-weight: 600;
+    color: aliceblue;
+    transition: 0.3s ease;
+}
+
+#user-stuff a {
+    text-decoration: none;
+    font-size: 45px;
+    font-weight: 600;
+    color: aliceblue;
+    transition: 0.3s ease;
+}
+
+
+
+#user-stuff li a:hover {
+    color: aqua;
+}
+
+#user-stuff .ham {
+    display: none;
+}
+
+
+
+@media (max-width:470px) {
+
+    body {
+        max-width: inherit;
+    }
+
+    #header {
+        display: flex;
+        flex-direction: row;
+        padding: 10px 0;
+        align-items: center;
+        justify-content: left;
+        height: fit-content;
+    }
+
+    #user-stuff .ham {
+        display: block;
+    }
+
+    #user-stuff {
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #user-stuff {
+        padding: 5px;
+    }
+
+    #user-stuff li a,
+    #user-stuff a {
+        padding: 0 6px;
+        font-size: 30px;
+
+    }
+
+    #head-logs {
+        position: fixed;
+        min-width: fit-content;
+        bottom: 0;
+        background-color: #222;
+    }
+
+    #search-bar {
+        margin-right: 10px;
+
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        position: fixed;
+        top: 0;
+        height: fit-content;
+        width: fit-content;
+        margin: 0;
+        background-color: #e3e6f3;
+        box-shadow: 0 40px 60px;
+        right: -300px;
+        margin-top: 110px;
+    }
+
+    #navbar.active {
+        visibility: visible;
+    }
+}
+
+/*NAVIGATION BAR*/
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 15px 30px;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #231f20;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+
+/*HERO SECTION*/
+#hero {
+    background: url(teen_fashionistares/imgs/hero/heroimg.jpg);
+    height: 120vh;
+    background-repeat: no-repeat;
+    background-position: top 25% right 0;
+    background-size: contain;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    line-height: 2;
+    margin-top: 0;
+}
+
+#hero h2 {
+    padding-bottom: 15px;
+}
+
+#hero h1 {
+    color: #088178;
+}
+
+#hero p {
+    color: aliceblue;
+    font-size: 20px;
+}
+
+#hero button {
+    background-color: #231f20;
+    border: 0;
+    padding: 18px;
+    margin: 4px 2px;
+    transition: 0.2s ease;
+    border-radius: 20px;
+}
+
+#hero button:hover {
+    background-color: #312e2f;
+}
+
+#hero button a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+}
+
+@media (max-width:470px) {
+
+    .hero-box h1,
+    .hero-box p {
+        display: none;
+    }
+
+    #hero {
+        background-size: cover;
+        margin-top: 5px;
+        padding: 0;
+        height: fit-content;
+    }
+
+    .hero-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid black;
+        padding: 20px;
+    }
+
+    .hero-box h2 {
+        padding: 20px 0;
+        font-size: 30px;
+    }
+
+    #hero button {
+        padding: 10px;
+        width: fit-content;
+    }
+
+    .stuffs h3 {
+        display: none;
+    }
+}
+
+#container {
+    text-align: center;
+    width: 99.9%;
+    margin: 5px;
+    margin: 30px;
+}
+
+#container h2 {
+    padding: 20px;
+}
+
+.stuffs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.stuffs h3 {
+    font-size: 27px;
+    padding: 10px;
+}
+
+.stuffs h3:hover {
+    border-bottom: 3px solid black;
+    padding-bottom: 2px;
+    color: #088178;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.container-app {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+
+}
+
+.app1 {
+    width: 20%;
+    min-width: 250px;
+    border-radius: 25px;
+    padding: 10px 12px;
+    border: 1px solid #ccd7e0;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.4s ease;
+
+}
+
+.app1:hover {
+    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
+    translate: -2px -3px;
+    cursor: pointer;
+}
+
+.app1:hover img {
+    width: 100%;
+}
+
+.app1 img {
+    transition: 0.4s ease;
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.app1 .descript {
+    line-height: 2;
+}
+
+.descript {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.app2 .btn {
+    background: black;
+    width: fit-content;
+}
+
+.descript span {
+    padding-top: 5px;
+}
+
+.descript h5 {
+    font-size: 15px;
+}
+
+.descript h4 {
+    font-weight: 700;
+    font-size: 17px;
+    color: #088178;
+
+}
+
+.app2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.app1 .cart {
+    width: 40%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+}
+
+#bar {
+    display: none;
+}
+
+@media (max-width:470px) {
+
+
+    #bar {
+        display: block;
+    }
+
+    .top h2 {
+        font-size: 28px;
+        border-bottom: #222 2px solid;
+    }
+
+    .top {
+        margin: 20px;
+    }
+
+    .app1 {
+        border: 2px solid black;
+    }
+
+    #banner1 h4 {
+        display: none;
+    }
+}
+
+/* Banner */
+
+#banner1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(teen_fashionistateen_fashionistares/imgs/banner/b2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh;
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+}
+
+
+#banner1 h2,
+#banner1 h4 {
+    color: antiquewhite;
+    padding-top: 30px;
+    font-size: 30px;
+}
+
+#banner span {
+    font-size: 40px;
+    color: red;
+}
+
+#banner1 button,
+.fbanner button {
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 00.2s;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 4px;
+
+}
+
+#banner1 button:hover {
+    color: #fff;
+    background-color: #088178;
+}
+
+#Accessories {
+    margin: 30px;
+}
+
+#Accessories .top h2 {
+    padding: 20px;
+
+}
+
+
+#banner2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px;
+    padding: 30px;
+}
+
+@media (max-width:470px) {
+    #banner2 {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    #sbanner {
+        display: none;
+    }
+
+    #banner3 .ban {
+        margin-top: 10px;
+    }
+
+    .ban:nth-child(1) {
+        display: none;
+    }
+}
+
+.fbanner {
+    background-image: url(teen_fashionistares/imgs/banner/b10.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    line-height: 40px;
+    margin: auto;
+    width: 40%;
+    height: 50vh;
+}
+
+#sbanner {
+    background-image: url(teen_fashionistares/imgs/banner/b10.jpg);
+}
+
+#banner2 button {
+    width: fit-content;
+    background: none;
+    color: #e8f6ea;
+    border: 2px solid #fff;
+}
+
+#banner2 button:hover {
+    background-color: white;
+    color: #222;
+    border: #222;
+}
+
+#banner3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px;
+}
+
+.ban {
+    border: 2px solid black;
+    padding: 30px;
+    height: 30vh;
+}
+
+.ban h2 {
+    font-size: 26px;
+}
+
+.ban h4 {
+    font-size: 20px;
+}
+
+.ban:hover {
+    cursor: pointer;
+    translate: 0px -4px;
+    transition: 0.4s ease-in-out;
+}
+
+#categories {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#categories .bigdabba {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+}
+
+#categories .dabba {
+    display: flex;
+    background-color: #088178;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin: 40px;
+    margin-top: 0;
+    padding-top: 0;
+    box-shadow: 0 3px 5px black;
+}
+
+.contents {
+    text-align: left;
+}
+
+#categories h3 {
+    font-weight: 400;
+    margin: 30px;
+    margin-left: 0;
+    transition: 0.3s;
+}
+
+#categories h3:hover {
+    border-bottom: 3px solid #222;
+}
+
+#categories h4 {
+    color: #222;
+    font-size: 15px;
+    padding: 4px;
+    font-weight: 400;
+}
+
+#categories h4:hover,
+#categories h3:hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#categ:hover .bigdabba {
+    display: block;
+}
+
+
+.offers {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.offers img {
+    width: 40%;
+}
+
+.pagination {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.pagination i {
+    width: 50px;
+    background-color: #222;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.pagination i:hover {
+    background-color: #312e2f;
+    border: #312e2f;
+    border-radius: 10px;
+}
+
+.bt button {
+    margin: 20px 20px 0px 0px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+
+
+}
+
+.bt button i {
+    color: white;
+    transition: 0.3s;
+}
+
+
+#brand-box .box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#brand-box h2 {
+    margin: 20px;
+
+}
+
+
+.box .ban {
+    margin: 40px;
+    width: 230px;
+    height: 20vh;
+
+
+}
+
+.box .ban:nth-child(1) {
+    background-image: url(teen_fashionistares/brands/a.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.box .ban:nth-child(2) {
+    background-image: url(teen_fashionistares/brands/b.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.box .ban:nth-child(3) {
+    background-image: url(teen_fashionistares/brands/h.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.box .ban:nth-child(4) {
+    background-image: url(teen_fashionistares/brands/c.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.box .ban:nth-child(5) {
+    background-image: url(teen_fashionistares/brands/d.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.box .ban:nth-child(6) {
+    background-image: url(teen_fashionistares/brands/e.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.box .ban:nth-child(7) {
+    background-image: url(teen_fashionistares/brands/f.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.box .ban:nth-child(8) {
+    background-image: url(teen_fashionistares/brands/g.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+#categories-page {
+    width: 99%;
+    margin: 40px;
+}
+
+.categories-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#categories-page h5 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#categories-page h6 {
+    font-size: 17px;
+    padding: 4px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.catbox {
+    line-height: 2;
+}
+
+#categories-page h6:hover {
+    translate: 0px -2px;
+    color: #312e2f;
+}
+
+#categories-page h5:hover {
+    color: #088178;
+}
+
+/* SIngle product page */
+
+#sprod {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    margin: 40px;
+    background-color: antiquewhite;
+}
+
+
+.img-div {
+    /* border: 2px solid black; */
+    width: 40%;
+    padding: 10px;
+}
+
+.img-div .main-img {
+    /* border: 2px solid black; */
+    width: 90%;
+    margin: 20px;
+    margin-top: 0;
+}
+
+.img-div .main-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.sub-img img {
+
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    width: max-content;
+    height: 20vh;
+}
+
+.img-div .sub-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.det-div {
+    margin-left: 0;
+    /* border: 2px solid black; */
+    padding: 30px;
+}
+
+.det-div h4 {
+    padding: 20px 0;
+    font-size: 30px;
+    color: #222;
+}
+
+.det-div span,
+h5 {
+    font-size: 25px;
+}
+
+
+.details-div h4 {
+    margin-top: 30px;
+}
+
+.details-div ul {
+    padding: 8px;
+}
+
+.details-div ul li {
+    line-height: 2;
+}
+
+.reviews textarea {
+    margin: 20px 0;
+    padding: 5px;
+}
+
+
+.sel {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sel button {
+    /* border: 2px solid black; */
+    color: white;
+    padding: 18px;
+    transition: 0.4s;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.sel .a2c {
+    background-color: #088178;
+}
+
+.sel .buynow {
+    background-color: #222;
+}
+
+.sel .buynow:hover {
+    border-radius: 8px;
+    background-color: #312e2f;
+}
+
+.sel .a2c:hover {
+    border-radius: 8px;
+    background-color: cornflowerblue;
+}
+
+#sprod select {
+    cursor: pointer;
+    color: #222;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Blog */
+
+#blog {
+    background-image: url(teen_fashionistares/imgs/banner/b1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#blog h2,
+#blog h3 {
+    padding: 5px;
+    color: white;
+}
+
+
+#aboutone {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-sec {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-img img {
+    width: 200%;
+}
+
+.rep-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px
+}
+
+.rep-box h5 {
+    font-weight: 500;
+}
+
+.rep-box h6 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.d-mode button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: fit-content;
+}
+
+@media (max-width:470px) {
+    .d-mode button {
+        position: fixed;
+        bottom: 60px;
+        right: 0;
+        width: fit-content;
+        height: fit-content;
+        border: none;
+        background-color: none;
+    }
+
+    .d-mode i {
+        font-size: 4px;
+        padding: 0;
+    }
+}
+
+.d-mode i {
+    padding: 10px 20px;
+    font-size: 40px;
+    background-color: none;
+}
+
+.d-mode button {
+    background: none;
+    z-index: 1;
+    border: #222 3px solid;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.d-mode button:hover {
+    background: linear-gradient(#28313B, #485461);
+    transition: 0.6s;
+}
+
+.d-mode {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #222;
+        color: white;
+    }
+
+    #navbar {
+        background-color: white;
+    }
+
+    #nav {
+        background-color: white;
+    }
+
+    #navbar li a {
+        color: #222;
+    }
+
+    .top h2 {
+        color: #222;
+    }
+}
+
+/* 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121315;
+        color: white;
+    }
+
+    #navbar {
+        background-color: #222;
+    }
+
+    #nav {
+        background-color: #222;
+    }
+
+    #navbar li a {
+        color: white;
+    }
+
+    .top h2 {
+        color: white;
+    }
+
+    .app2 h4 {
+        color: red;
+    }
+
+    .container .section-header {
+        color: white ;
+    }
+
+    .cart-row span {
+        color: white;
+    }
+
+} */
+
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+#dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.heading-d {
+    color: white;
+}
+
+
+/* add to cart */
+
+
+
+.band-name {
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+.band-name-large {
+    font-size: 8em;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+
+
+
+.contaner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+    /* display: none; */
+    border-radius: 20px;
+    width: 100%;
+    /* position: absolute;
+    right: 0; */
+    z-index: 1;
+    /* top: 125px; */
+    background: rgba(0, 0, 0, 0.01);
+    backdrop-filter: saturate(180%) blur(5px);
+}
+
+
+
+
+.section-header {
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: rgb(1, 1, 1);
+    text-align: center;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: #2D9CDB;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+}
+
+.btn-primary {
+    color: white;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+    color: #222;
+    background: none;
+}
+
+footer {
+    background-color: #121315;
+    color: #a7a7a7;
+    font-size: 16px;
+}
+
+
+.row {
+    padding: 1em 1em;
+}
+
+.row.primary {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    align-items: stretch;
+    margin-top: 10px;
+}
+
+.column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
+}
+
+footer h3 {
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-size: 1.7em;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
+.column ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+.column li:not(:first-child) {
+    margin-top: 0.8em;
+}
+
+.column ul li a {
+    color: #a7a7a7;
+    text-decoration: none;
+}
+
+.column ul li a:hover {
+    color: #2a8ded;
+}
+
+.about p {
+    text-align: justify;
+    line-height: 2;
+    margin: 0;
+}
+
+.column input,
+.column button {
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.column button {
+    background-color: #c7940a;
+    color: #ffffff;
+}
+
+div.social {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.4em;
+    flex-direction: row;
+    margin-top: 0.5em;
+}
+
+.social i {
+    color: #bac6d9;
+}
+
+.copyright {
+    padding: 0.3em 1em;
+    background-color: #25262e;
+}
+
+
+
+.copyright p {
+    font-size: 0.9em;
+    text-align: right;
+}
+
+@media screen and (max-width: 850px) {
+    .row.primary {
+        grid-template-columns: 1fr;
+    }
+
+}

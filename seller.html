@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://kit.fontawesome.com/465fe271fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#" style="color:white; font-size: 30px;">SELLERS PAGE</a>
+        <div>
+            <ul id="user-stuff">
+                <li><a href="account.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section id="nav">
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="v1.html">CATALOG</a></li>
+                <li><a href="new.html">PRICING</a></li>
+                <li><a href="categories.html" id="categ">PENDING</a></li>
+                <li><a href="brands.html">ADVERTISING</a></li>
+                <li><a href="aboutus.html">REPORTS</a></li>
+                <li><a href="faq.html">STORES</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="top">
+        <h2>YOUR PRODUCTS</h2>
+    </div>
+
+    <div id="sprod" class="section-p1">
+        <div class="img-div">
+            <div class="main-img">
+                <img src="res/one.jpg" alt="">
+            </div>
+            <div class="sub-img">
+                <img src="res/one.jpg" alt="">
+                <img src="res/one.jpg" alt="">
+                <img src="res/one.jpg" alt="">
+
+            </div>
+        </div>
+        <div class="det-div">
+            <div class="price-div">
+                <span>Adidas</span>
+                <h5>Cartoon Astronaut T-Shirts</h5>
+                <h4>$78.00</h4>
+            </div>
+            <div class="extra-divs">
+                <div>
+                    <i class="fa-light fa-star-sharp"></i>
+                    <i class="fa-light fa-star-sharp"></i>
+                    <i class="fa-light fa-star-sharp"></i>
+                    <i class="fa-light fa-star-sharp"></i>
+                </div>
+                <div class="sel">
+
+                    <button class="a2c">Change price</button>
+                    <button onclick="addstocks()" class="a2c">Add Stocks</button>
+                    <button class="buynow">Stop selling</button>
+                    <script>
+                        function addstocks() {
+                            var shopItem = document.getElementsByClassName('rep-box')
+                            var no = shopItem.getElementsByClassName('stoc').innerText
+                            var addi = prompt("No. of addition?")
+
+                            var tot = no + addi;
+
+                            document.getElementsByClassName('stoc').innerText = tot;
+
+                        }
+                    </script>
+                </div>
+
+            </div>
+            <div class="details-div">
+                <h4>Product Details</h4>
+                <ul type="dotted">
+                    <li>This is the best product you could ever find</li>
+                    <li>Cheap and expensive sets of costume</li>
+                    <li>Best waterproof clothing materials</li>
+                </ul>
+            </div>
+            <div class="reports">
+                <h4>Reports</h4>
+                <div class="rep-box">
+                    <div>
+                        <h5>Sold</h5><br>
+                        <h6>300</h6>
+                    </div>
+                    <div>
+                        <h5>Review</h5><br>
+                        <h6>4.5</h6>
+                    </div>
+                    <div>
+                        <h5>Stock Left</h5><br>
+                        <h6 class="stoc">170</h6>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="sprod" class="section-p1">
+        <div class="img-div">
+            <div class="main-img">
+                <img src="res/one.jpg" alt="">
+            </div>
+            <div class="sub-img">
+                <img src="res/one.jpg" alt="">
+                <img src="res/one.jpg" alt="">
+                <img src="res/one.jpg" alt="">
+
+            </div>
+        </div>
+        <div class="det-div">
+            <div class="price-div">
+                <span>Calvin</span>
+                <h5>Goon Astronaut T-Shirts</h5>
+                <h4>$69.00</h4>
+            </div>
+            <div class="extra-divs">
+                <div>
+                    <i class="fa-light fa-star-sharp"></i>
+                    <i class="fa-light fa-star-sharp"></i>
+                    <i class="fa-light fa-star-sharp"></i>
+                    <i class="fa-light fa-star-sharp"></i>
+                </div>
+                <div class="sel">
+
+                    <button class="a2c">Change price</button>
+                    <button class="a2c">Add Stocks</button>
+                    <button class="buynow">Stop selling</button>
+
+                </div>
+
+            </div>
+            <div class="details-div">
+                <h4>Product Details</h4>
+                <ul type="dotted">
+                    <li>This is the best product you could ever find</li>
+                    <li>Cheap and expensive sets of costume</li>
+                    <li>Bhosdike lena hai to le warna gaand maraa</li>
+                    <li>Best waterproof clothing material</li>
+                </ul>
+            </div>
+            <div class="reports">
+                <h4>Reports</h4>
+                <div class="rep-box">
+                    <div>
+                        <h5>Sold</h5><br>
+                        <h6>30</h6>
+                    </div>
+                    <div>
+                        <h5>Review</h5><br>
+                        <h6>4.1</h6>
+                    </div>
+                    <div>
+                        <h5>Stock Left</h5><br>
+                        <h6>59</h6>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <section>
+        <footer>
+            <div class="row primary">
+                <div class="column about">
+                    <h3> Teen Fashionista</h3>
+                    <p>
+                        TF offers a seamless, fun and reliable shopping experience to
+                        millions of Teens worldwide.
+                    </p>
+                    <div class="social">
+                        <i class="fa-brands fa-facebook-square"></i>
+                        <i class="fa-brands fa-instagram-square"></i>
+                        <i class="fa-brands fa-twitter-square"></i>
+                        <i class="fa-brands fa-youtube-square"></i>
+                        <i class="fa-brands fa-whatsapp-square"></i>
+                    </div>
+                </div>
+                <div class="column links">
+                    <h3>Some Links</h3>
+                    <ul>
+                        <li>
+                            <a href="#faq">F.A.Q</a>
+                        </li>
+                        <li>
+                            <a href="#cookies-policy">Cookies Policy</a>
+                        </li>
+                        <li>
+                            <a href="#terms-of-services">Terms Of Service</a>
+                        </li>
+                        <li>
+                            <a href="#support">Support</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="column links">
+                    <h3>Some Links</h3>
+                    <ul>
+                        <li>
+                            <a href="#faq">F.A.Q</a>
+                        </li>
+                        <li>
+                            <a href="#cookies-policy">Cookies Policy</a>
+                        </li>
+                        <li>
+                            <a href="#terms-of-services">Terms Of Service</a>
+                        </li>
+                        <li>
+                            <a href="#support">Support</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="column subscribe">
+                    <h3>Newsletter</h3>
+                    <div>
+                        <input type="email" placeholder="Your email id here" />
+                        <button>Subscribe</button>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>
